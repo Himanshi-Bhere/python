@@ -8,14 +8,14 @@ Instead of writing the same code multiple times, write it once and call it whene
 
 ---
 
-## Defining a Function
+## Creating a Function
 
 ```python
 def greet():
     print("Hello")
 ```
 
-Call it:
+Calling:
 
 ```python
 greet()
@@ -25,14 +25,11 @@ greet()
 
 ## Parameters
 
-Parameters allow functions to receive input.
+Parameters allow a function to receive input.
 
 ```python
 def greet(name):
-    print(f"Hello {name}")
-```
-
-Example:
+    print(f"Hello {name}")```
 
 ```python
 greet("Himanshi")
@@ -46,65 +43,67 @@ greet("Himanshi")
 
 ```python
 def add(a, b):
-    return a + b
-```
+    return a + b ```
 
-Example:
-
-```python
-result = add(10, 20)
-
+```pythonresult = add(10, 20)
 print(result)
 ```
 
+
+Use `return` when the result will be used later.
+
 ---
 
-## print() vs return
+## Difference Between print() and return
 
-Using `print()`:
+### print()
+
+Displays output.
 
 ```python
 def add(a, b):
     print(a + b)
 ```
 
-Displays the result but cannot be reused.
+---
 
-Using `return`:
+### return
+
+Returns a value.
 
 ```python
 def add(a, b):
     return a + b
 ```
 
-Returns the value so it can be stored, used in calculations, or passed to other functions.
+`return` is preferred in reusable functions.
 
 ---
 
 ## Local Variables
 
-Variables created inside a function exist only inside that function.
+Variables created inside a function.
 
 ```python
 def demo():
     x = 10
 ```
 
-Outside the function, `x` does not exist.
+Cannot be accessed outside the function.
 
 ---
 
 ## Global Variables
 
-Variables created outside functions.
+Variables declared outside functions.
 
 ```python
 college = "KCCEMSR"
 ```
 
-Can be accessed inside functions.
+Accessible inside functions.
 
-Avoid modifying global variables unless necessary.
+Avoid modifying global variables whenever possible.
 
 ---
 
@@ -112,36 +111,19 @@ Avoid modifying global variables unless necessary.
 
 ```python
 def greet(name="Guest"):
-    print(f"Hello {name}")
-```
-
-If no value is passed:
-
-```
-Hello Guest
-```
+    print(f"Hello {name}")```
 
 ---
-
 ## Keyword Arguments
-
-Instead of:
-
-```python
-student("Himanshi", 21, "EXTC")
-```
-
-You can write:
 
 ```python
 student(
     name="Himanshi",
-    age=21,
-    branch="EXTC"
+    age=21
 )
 ```
 
-This improves readability.
+Improves readability.
 
 ---
 
@@ -167,41 +149,40 @@ def profile(**details):
 
 ---
 
-## Best Practices
+# Best Practices
 
-- One function should do one job.
-- Keep functions short.
-- Use meaningful names.
-- Return values instead of printing whenever possible.
-- Avoid duplicate code.
+- One function should perform one task.
+- Keep functions small.
+- Use meaningful function names.
+- Prefer `return` over `print` when possible.
+- Avoid global variables.
 
 ---
 
-## Common Mistakes
+# Common Mistakes
 
-❌ Forgetting to call the function.
+❌ Writing one huge function.
+
+❌ Using `print()` everywhere instead of `return`.
+
+❌ Using unclear function names.
 
 ```python
-def greet():
-    print("Hello")
+def abc():
 ```
 
-Nothing happens until:
+Better
 
 ```python
-greet()
+def calculate_total():
 ```
 
 ---
 
-❌ Printing instead of returning when the value needs to be reused.
-
----
-
-## Key Takeaways
+# Key Takeaways
 
 - Functions make code reusable.
 - Parameters pass data into functions.
 - `return` sends data back.
 - Local variables exist only inside functions.
-- Keep functions small and focused.
+- Small functions are easier to test and maintain.
