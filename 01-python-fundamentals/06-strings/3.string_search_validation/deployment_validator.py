@@ -9,17 +9,23 @@ Print: """
 
 artifact = input("Enter deployment artifact: ")
 artifact = artifact.strip() # Remove accidental surrounding spaces
+
 if artifact.endswith(".zip"): # Check whether the artifact ends with .zip
     print("The artifact ends with .zip")
+    
 if artifact.startswith("payment-service") : # Check whether it starts with payment-service
     print("The artifact starts with payment-service")
+    
 print(f"The artifact contains {artifact.count('-')} '-' characters") # Count how many - characters exist
 prod_position = artifact.find("prod") # Find the position where "prod" starts
+
 if prod_position != -1: # Check if "prod" exists
     print(f"'prod' starts at position {prod_position}")
 else:
     print("'prod' does not exist in the artifact name")
+    
 print("======")
+
 # print whether the artifact is valid based on the checks
 if artifact.endswith(".zip"):
     print("Zip file: True")
