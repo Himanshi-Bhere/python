@@ -1,0 +1,4 @@
+Hostname: Web-01
+Status: Running
+CPU Usage: 49%
+Memory: 16GB
