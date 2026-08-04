@@ -1,0 +1,6 @@
+file = open("visitors.txt", "a")
+file.write("Visitor1: Himanshi \n")
+file.write("Visitor2: John \n")
+file.write("Visitor3: Alice \n")
+file.write("Visitor4: Bob \n")
+file.close()
