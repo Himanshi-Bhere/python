@@ -1,18 +1,3 @@
-""" Program should
-open file
-calculate total students
-average marks
-highest mark
-topper name
-handle file-not-found error
-handle any unexpected exception
-always print
-Analysis Complete
-Hint : split(",")
-int()
-keep track of highest mark
-use variables like highest_marks and topper """
-
 filename = "marks.txt"
 
 print("=" *40)
