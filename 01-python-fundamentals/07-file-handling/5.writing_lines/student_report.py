@@ -5,6 +5,6 @@ students = [
     "Priya\n",
     "Himanshu\n"
 ]
-file = open("students.txt","w")
+file = open("students.txt", "w")
 file.writelines(students)
 file.close()
